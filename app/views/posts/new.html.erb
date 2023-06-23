@@ -1,0 +1,17 @@
+<h1>Crear Post</h1>
+<br><br>
+<div class="container-fluid form-control p-5 bg-primary shadow">
+<%= form_with model: @post, method: :post do |form| %>
+<div class="col">
+    <%= form.label :title, "Titulo del post" %>
+    <%= form.text_field :title, class:"form-control" %>
+</div>
+<div class="col">
+<%= form.label :content, "Contenido" %>
+ <%= form.text_field :content, class:"form-control"  %>
+</div>
+<div class="col">
+<%= form.submit "Enviar", class:"form-control btn btn-light my-3"  %>
+</div>
+<% end %>
+</div>
